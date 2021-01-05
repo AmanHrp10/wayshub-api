@@ -4,7 +4,7 @@
   "description": "Task 2 bootcamp Dumbways",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "Amanudin Harahap",
   "license": "ISC",
