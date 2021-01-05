@@ -11,6 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       //? Relationship
       Video.belongsTo(models.Channel, {
         as: 'channel',
+        foreignKey: 'channelId',
       });
       Video.hasMany(models.Comment, {
         as: 'comments',
