@@ -1,5 +1,7 @@
 'use strict';
-const { Model } = require('sequelize');
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Video extends Model {
     /**
@@ -8,29 +10,19 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      //* Relationship
-
-      Video.belongsTo(models.Channel, {
-        as: 'channel',
-      });
-      Video.hasMany(models.Comment, {
-        as: 'comments',
-      });
+      // define association here
     }
-  }
-  Video.init(
-    {
-      title: DataTypes.STRING,
-      thumbnail: DataTypes.STRING,
-      description: DataTypes.STRING,
-      video: DataTypes.STRING,
-      viewCount: DataTypes.INTEGER,
-      channelId: DataTypes.INTEGER,
-    },
-    {
-      sequelize,
-      modelName: 'Video',
-    }
-  );
+  };
+  Video.init({
+    title: DataTypes.STRING,
+    thumbnail: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    video: DataTypes.STRING,
+    viewCount: DataTypes.INTEGER,
+    channelId: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Video',
+  });
   return Video;
 };
