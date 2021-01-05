@@ -39,7 +39,7 @@ exports.getChannelsAll = async (req, res) => {
   } catch (err) {
     res.send({
       status: 'Request failed',
-      message: 'Server error',
+      message: err.message,
     });
   }
 };
