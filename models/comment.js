@@ -13,6 +13,9 @@ module.exports = (sequelize, DataTypes) => {
       Comment.belongsTo(models.Channel, {
         as: 'channel',
       });
+      Comment.belongsTo(models.Video, {
+        as: 'video',
+      });
     }
   }
   Comment.init(
