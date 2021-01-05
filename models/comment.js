@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Comment.init(
     {
-      comment: DataTypes.STRING,
+      comment: DataTypes.TEXT,
       channelId: DataTypes.INTEGER,
       videoId: DataTypes.INTEGER,
     },

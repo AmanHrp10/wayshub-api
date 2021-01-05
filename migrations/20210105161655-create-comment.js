@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       comment: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
       },
       channelId: {
         allowNull: false,
