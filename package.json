@@ -4,9 +4,7 @@
   "description": "Task 2 bootcamp Dumbways",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "client": "npm start --prefix ./client",
-    "dev": "concurrently \"npm start\" \"npm run client\""
+    "start": "nodemon server.js"
   },
   "author": "Amanudin Harahap",
   "license": "ISC",
