@@ -45,7 +45,7 @@ exports.getVideoAll = async (req, res) => {
   } catch (err) {
     res.send({
       status: 'Request failed',
-      message: 'error',
+      message: err.message,
     });
   }
 };
