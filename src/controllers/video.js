@@ -9,20 +9,26 @@ exports.getVideoAll = async (req, res) => {
       attributes: {
         exclude: ['channelId', 'updatedAt', 'ChannelId'],
       },
-      include: {
-        model: Channel,
-        as: 'channel',
-        attributes: {
-          exclude: [
-            'createdAt',
-            'updatedAt',
-            'ChannelId',
-            'subscribeId',
-            'commentId',
-            'password',
-          ],
+      include: [
+        {
+          model: Channel,
+          as: 'channel',
+          attributes: {
+            exclude: [
+              'createdAt',
+              'updatedAt',
+              'ChannelId',
+              'subscribeId',
+              'commentId',
+              'password',
+            ],
+          },
         },
-      },
+        {
+          model: Comment,
+          as: 'comments',
+        },
+      ],
     });
     if (!videos) {
       res.send({
