@@ -10,13 +10,14 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       //* Relationship
 
-      Comment.belongsTo(models.Channel, {
-        as: 'channel',
-        foreignKey: 'channelId',
-      });
       Comment.belongsTo(models.Video, {
         foreignKey: 'videoId',
         as: 'video',
+      });
+
+      Comment.belongsTo(models.Channel, {
+        as: 'channel',
+        foreignKey: 'channelId',
       });
     }
   }

@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      //  * Relationship
+      // define association here
+
       Channel.belongsToMany(models.Channel, {
         as: 'subscribers',
         foreignKey: 'channelId',
@@ -32,11 +33,11 @@ module.exports = (sequelize, DataTypes) => {
   Channel.init(
     {
       email: DataTypes.STRING,
+      password: DataTypes.STRING,
       channelName: DataTypes.STRING,
-      description: DataTypes.STRING,
+      description: DataTypes.TEXT,
       thumbnail: DataTypes.STRING,
       photo: DataTypes.STRING,
-      password: DataTypes.STRING,
     },
     {
       sequelize,

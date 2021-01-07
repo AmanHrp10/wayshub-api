@@ -11,11 +11,14 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
+      password: {
+        type: Sequelize.STRING
+      },
       channelName: {
         type: Sequelize.STRING
       },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       thumbnail: {
         type: Sequelize.STRING
