@@ -77,7 +77,7 @@ router.patch(
 router.delete('/channel/:id', Private, deleteChannel);
 
 //? Video routes
-router.get('/videos', getVideoAll);
+router.get('/videos/:offset/:limit', getVideoAll);
 router.get('/video/:id', getVideoById);
 router.post('/search', getSearchVideo);
 router.post('/video', Private, uploadCloud('thumbnail', 'video'), addVideo);
