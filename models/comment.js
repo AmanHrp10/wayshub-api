@@ -16,8 +16,8 @@ module.exports = (sequelize, DataTypes) => {
       });
 
       Comment.belongsTo(models.Channel, {
-        as: 'channel',
         foreignKey: 'channelId',
+        as: 'channel',
       });
     }
   }
