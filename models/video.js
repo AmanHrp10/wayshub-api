@@ -10,10 +10,11 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       //? Relationship
       Video.belongsTo(models.Channel, {
-        as: 'channel',
         foreignKey: 'channelId',
+        as: 'channel',
       });
       Video.hasMany(models.Comment, {
+        foreignKey: 'videoId',
         as: 'comments',
       });
     }
