@@ -15,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'channelId',
       });
       Comment.belongsTo(models.Video, {
-        as: 'video',
         foreignKey: 'videoId',
+        as: 'video',
       });
     }
   }

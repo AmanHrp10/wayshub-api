@@ -5,7 +5,12 @@ const { Op } = require('sequelize');
 //?  Get videos all
 exports.getVideoAll = async (req, res) => {
   try {
+    const { offset, limit } = req.params;
+
     const videos = await Video.findAll({
+      subQuery: false,
+      offset: parseInt(offset),
+      limit: parseInt(limit),
       attributes: {
         exclude: ['channelId', 'updatedAt', 'ChannelId'],
       },
