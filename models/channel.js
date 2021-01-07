@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       });
 
       //* Relationship
-      Channel.hasMany(models.Videos, {
+      Channel.hasMany(models.Video, {
         as: 'videos',
       });
       Channel.hasMany(models.Comment, {
