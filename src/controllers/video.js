@@ -1,11 +1,11 @@
-const { Video, Channel, Comment } = require('../../models');
+const { Videos, Channel, Comment } = require('../../models');
 const Joi = require('joi');
 const { Op } = require('sequelize');
 
 //?  Get videos all
 exports.getVideoAll = async (req, res) => {
   try {
-    const videos = await Video.findAll({
+    const videos = await Videos.findAll({
       attributes: {
         exclude: ['channelId', 'updatedAt', 'ChannelId'],
       },
@@ -45,7 +45,7 @@ exports.getVideoAll = async (req, res) => {
   } catch (err) {
     res.send({
       status: 'Request failed',
-      message: err.message,
+      message: 'error',
     });
   }
 };
