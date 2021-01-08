@@ -3,11 +3,12 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
+const port = process.env.PORT || 5000;
+
 //? Use express bodyParser
 app.use(express.json());
 
 //* Port
-const port = process.env.PORT || 5000;
 
 //? Using library
 app.use(cors());
