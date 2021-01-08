@@ -15,7 +15,7 @@ app.use(cors());
 app.use('/uploads', express.static('uploads'));
 
 // *Import Module
-const routers = require('./src/routes/');
+const routers = require('./src/routes');
 
 app.use('/api/v1', routers);
 
