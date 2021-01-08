@@ -51,6 +51,13 @@ const {
 
 //! Routers
 
+router.get('/', (req, res) => {
+  res.send({
+    status: 'Request success',
+    message: 'Routers',
+  });
+});
+
 //? Susbcribe routes
 router.post('/subscribe/:id', Private, addSubscribe);
 router.delete('/subscribe/:id', Private, removeSubscribe);
