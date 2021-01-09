@@ -37,7 +37,7 @@ exports.getVideoAll = async (req, res) => {
     res.send({
       status: 'Request success',
       message: 'Data succesfully fetched',
-      // count: videos.length,
+      count: videos.length,
       data: {
         videos,
       },

@@ -95,7 +95,7 @@ exports.register = async (req, res) => {
       privateKey
     );
 
-    res.status(201).send({
+    res.send({
       status: 'Request success',
       message: 'Your account was registered',
       data: {
