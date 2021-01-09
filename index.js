@@ -24,4 +24,4 @@ app.get('/', (req, res) => {
   res.send('Wayshub API');
 });
 
-app.listen(port, () => console.log(`server is running on localhost:${port}`));
+app.listen(port, () => console.log(`server is running on ${port}`));
