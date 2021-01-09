@@ -5,26 +5,26 @@ const { Op } = require('sequelize');
 //?  Get videos all
 exports.getVideoAll = async (req, res) => {
   try {
-    const videos = 'Random'
-      // await Video.findAll({
-      // attributes: {
-      //   exclude: ['channelId', 'updatedAt', 'ChannelId'],
-      // },
-      // include: {
-      //   model: Channel,
-      //   as: 'channel',
-      //   attributes: {
-      //     exclude: [
-      //       'createdAt',
-      //       'updatedAt',
-      //       'ChannelId',
-      //       'subscribeId',
-      //       'commentId',
-      //       'password',
-      //     ],
-      //   },
-      // },
-    });
+    const videos = 'Random';
+    // await Video.findAll({
+    // attributes: {
+    //   exclude: ['channelId', 'updatedAt', 'ChannelId'],
+    // },
+    // include: {
+    //   model: Channel,
+    //   as: 'channel',
+    //   attributes: {
+    //     exclude: [
+    //       'createdAt',
+    //       'updatedAt',
+    //       'ChannelId',
+    //       'subscribeId',
+    //       'commentId',
+    //       'password',
+    //     ],
+    //   },
+    // },
+    // });
     // if (!videos) {
     //   res.send({
     //     status: 'Request success',
