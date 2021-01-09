@@ -67,23 +67,22 @@ exports.uploadCloud = (file1, file2) => {
   return (req, res, next) => {
     upload(req, res, (err) => {
       //! Error validation
-      if (req.fileValidationError)
-        return res.status(400).send(req.fileValidationError);
+      if (req.fileValidationError) return res.send(req.fileValidationError);
 
       //! Error file not selected
       if (!req.files && !err)
-        return res.status(400).send({
+        return res.send({
           message: 'Please select files to upload',
         });
 
       //! Error over size limits
       if (err) {
         if (err.code === 'LIMIT_FILE_SIZE') {
-          return res.status(400).send({
+          return res.send({
             message: 'Max file sized 200MB',
           });
         }
-        return res.status(400).send(err);
+        return res.send(err);
       }
       //? Next to controller
       return next();
