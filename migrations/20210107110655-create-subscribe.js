@@ -18,7 +18,7 @@ module.exports = {
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
-      subChannelId: {
+      subsChannelId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
