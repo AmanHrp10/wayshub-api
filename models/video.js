@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       //? Relationship
       Video.belongsTo(models.Channel, {
-        foreignKey: 'ChannelId',
+        foreignKey: 'channelId',
         as: 'channel',
       });
       Video.hasMany(models.Comment, {
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       description: DataTypes.TEXT,
       video: DataTypes.STRING,
       viewCount: DataTypes.INTEGER,
-      ChannelId: DataTypes.INTEGER,
+      channelId: DataTypes.INTEGER,
     },
     {
       sequelize,

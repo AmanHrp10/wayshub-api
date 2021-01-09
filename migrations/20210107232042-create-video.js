@@ -23,7 +23,7 @@ module.exports = {
       viewCount: {
         type: Sequelize.INTEGER,
       },
-      ChannelId: {
+      channelId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: {
