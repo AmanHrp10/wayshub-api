@@ -5,10 +5,11 @@ const { Op } = require('sequelize');
 //?  Get videos all
 exports.getVideoAll = async (req, res) => {
   try {
-    const videos = await Video.findAll({
-      attributes: {
-        exclude: ['channelId', 'updatedAt', 'ChannelId'],
-      },
+    const videos = 'Random'
+      // await Video.findAll({
+      // attributes: {
+      //   exclude: ['channelId', 'updatedAt', 'ChannelId'],
+      // },
       // include: {
       //   model: Channel,
       //   as: 'channel',
@@ -24,20 +25,20 @@ exports.getVideoAll = async (req, res) => {
       //   },
       // },
     });
-    if (!videos) {
-      res.send({
-        status: 'Request success',
-        message: `Channel not exist`,
-        count: videos.length,
-        data: {
-          videos,
-        },
-      });
-    }
+    // if (!videos) {
+    //   res.send({
+    //     status: 'Request success',
+    //     message: `Channel not exist`,
+    //     count: videos.length,
+    //     data: {
+    //       videos,
+    //     },
+    //   });
+    // }
     res.send({
       status: 'Request success',
       message: 'Data succesfully fetched',
-      count: videos.length,
+      // count: videos.length,
       data: {
         videos,
       },
