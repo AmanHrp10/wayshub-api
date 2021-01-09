@@ -15,7 +15,7 @@ exports.register = async (req, res) => {
         if (error) {
           return res.send({
             status: 'Request failed',
-            message: 'Server error',
+            message: `Photo error ${error.message}`,
           });
         }
       }
@@ -28,7 +28,7 @@ exports.register = async (req, res) => {
         if (error) {
           return res.send({
             status: 'Request failed',
-            message: 'Server Error',
+            message: `Thumbnail error ${error.message}`,
           });
         }
       }
@@ -113,7 +113,7 @@ exports.register = async (req, res) => {
   } catch (err) {
     return res.send({
       status: 'Request failed',
-      message: 'Server error',
+      message: `Server error ${err.message}`,
     });
   }
 };
