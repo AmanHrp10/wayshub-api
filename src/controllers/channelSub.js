@@ -170,9 +170,9 @@ exports.getChannelById = async (req, res) => {
       },
     });
   } catch (err) {
-    res.status(500).send({
+    res.send({
       status: 'Request failed',
-      message: 'Server error',
+      message: `Server error ${err}`,
     });
   }
 };
