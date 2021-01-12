@@ -9,7 +9,7 @@ exports.register = async (req, res) => {
     const { body } = req;
 
     const photo = await cloudinary.api.resource(
-      '/defaultPhoto/defaultProfile_shw4p3',
+      '/defaultPhoto/default',
       { resource_type: 'image' },
       (error, result) => {
         if (error) {

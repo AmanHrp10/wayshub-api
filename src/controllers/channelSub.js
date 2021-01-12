@@ -207,7 +207,7 @@ exports.editChannel = async (req, res) => {
       }
 
       if (filePhoto.encoding) {
-        if (filePhoto.filename !== 'defaultPhoto/defaultProfile_shw4p3') {
+        if (filePhoto.filename !== 'defaultPhoto/default') {
           cloudinary.uploader.destroy(filePhoto.filename, (error, result) => {
             console.log(error, result);
           });
@@ -242,7 +242,7 @@ exports.editChannel = async (req, res) => {
       }
 
       if (filePhoto.encoding) {
-        if (filePhoto.filename !== 'defaultPhoto/defaultProfile_shw4p3') {
+        if (filePhoto.filename !== 'defaultPhoto/default') {
           cloudinary.uploader.destroy(filePhoto.filename, (error, result) => {
             console.log(error, result);
           });
